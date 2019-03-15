@@ -1,0 +1,449 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Assignment 3 Part 1 - Andrew Pauls</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-03-13"><meta name="DC.source" content="Assignment3_Part1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Assignment 3 Part 1 - Andrew Pauls</h1><p>A constant voltage of 0.5 V was applied over the length of the semiconductor in the x direction (L) and the electric field (E) can be calculated by:</p><p><img src="Assignment3_Part1_eq07415224255240022562.png" alt="$$E = V/L$$" style="width:58px;height:15px;"></p><p>For a distance of 200 nm the electric field was calculated to be 0.5 mV/nm or 500000 V/m.</p><p>The force on each electron can be calculated by multiplying the charge of an electron (q) by the electric field in which the electron is present.</p><p><img src="Assignment3_Part1_eq08639051056555879654.png" alt="$$F = Eq$$" style="width:49px;height:13px;"></p><p>With an electron charge of 1.602 x <img src="Assignment3_Part1_eq03760032913543134411.png" alt="$10^{-19}$" style="width:32px;height:13px;"> the force on the each electron was found to be 8.01 x <img src="Assignment3_Part1_eq03360613297868248192.png" alt="$10^{-14}$" style="width:32px;height:13px;"> N.</p><p>The acceleration of the electrons is calcaulted by dividing the force on the electrons by the effective mass of the electrons which is 0.26 x 9.11 x <img src="Assignment3_Part1_eq04322733491991281921.png" alt="$10^{-31}$" style="width:31px;height:13px;"> kg.</p><p><img src="Assignment3_Part1_eq06337274642370619984.png" alt="$$a = F/m$$" style="width:58px;height:15px;"></p><p>The acceleration is calcualted to be 3.3817 x <img src="Assignment3_Part1_eq05779112986522596041.png" alt="$10^{17}$" style="width:24px;height:13px;">.</p><p>The formula for electron drift current density is given be the following formula:</p><p><img src="Assignment3_Part1_eq13744739607953306561.png" alt="$$J_n = -e n V_d$$" style="width:75px;height:13px;"></p><p>Where <img src="Assignment3_Part1_eq13172751684770155115.png" alt="$J_n$" style="width:13px;height:13px;"> is the drift current density, <img src="Assignment3_Part1_eq12226254761175012236.png" alt="$e$" style="width:6px;height:7px;"> is the charge of an electron, <img src="Assignment3_Part1_eq08984225997457563733.png" alt="$n$" style="width:9px;height:7px;"> is the electron concentration (per <img src="Assignment3_Part1_eq11531287747409335858.png" alt="$cm^2$" style="width:24px;height:13px;">)and <img src="Assignment3_Part1_eq09183487893542852589.png" alt="$V_d$" style="width:14px;height:13px;"> is the average drift velocity.</p><pre class="codeinput"><span class="comment">%list of constants</span>
+m0 = 9.11e-31;
+mn = 0.26*m0;
+kB = 1.38e-23;
+T = 300;
+q = 1.602e-19;
+n = 10^15;
+
+<span class="comment">%region limits</span>
+xlim = 200e-9;
+ylim = 100e-9;
+
+<span class="comment">%assignment 3 calcualtions</span>
+voltage = 0.1;
+E = voltage/xlim;
+F = E*q;
+acc = F/mn;
+
+<span class="comment">%thermal velocity</span>
+vth = sqrt(2*kB*T/mn);
+
+<span class="comment">%initialize the number of electrons</span>
+num_electrons = 5;
+
+<span class="comment">%defining array for electrons (x postion, y position, angle, velocity)</span>
+electron = zeros(num_electrons, 6);
+
+<span class="comment">% the previous position of the electron (previous x position, previous y</span>
+<span class="comment">% position)</span>
+electron_prev = zeros(num_electrons, 2);
+
+<span class="comment">%spacial step should be smaller than 1/100 of region size</span>
+time_step = xlim/vth/100;
+time_total = time_step*500;
+<span class="comment">%num_step = time_total/time_step;</span>
+
+<span class="comment">% used to make each electron a different colour</span>
+electron_colour = hsv(num_electrons);
+
+<span class="comment">% counter used to check temperature is constant</span>
+count = 0;
+
+<span class="comment">% scattering probability</span>
+Pscat = 1-exp(-time_step/0.2e-12);
+
+<span class="comment">%set an initial random postion and a fixed velocity for each electron</span>
+<span class="keyword">for</span> i=1:num_electrons
+    <span class="keyword">for</span> j=1:6
+        <span class="keyword">if</span>(j==1)
+            electron(i,j) = xlim*rand();
+        <span class="keyword">elseif</span>(j==2)
+            electron(i,j) = ylim*rand();
+        <span class="keyword">elseif</span>(j==3)
+            electron(i,j) = 2*pi*rand();
+        <span class="keyword">elseif</span>(j==4)
+            electron(i,j) = randn()*vth;
+        <span class="comment">% set vx value</span>
+        <span class="keyword">elseif</span>(j==5)
+            electron(i,j) = electron(i,4)*cos(electron(i,3));
+        <span class="comment">% set vy value</span>
+        <span class="keyword">else</span>
+            electron(i,j) = electron(i,4)*sin(electron(i,3));
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+figure(3)
+hist(electron(:,4))
+title(<span class="string">'Velocity Distribution'</span>)
+
+<span class="comment">% define a temperature and time array for plotting</span>
+temperature= zeros(time_total/time_step,1);
+time = zeros(time_total/time_step,1);
+
+<span class="comment">% counter for mean collision time</span>
+collision_count = 0;
+
+running_time = 0;
+
+<span class="comment">% velocity array used to calculated mean free path</span>
+velocity = zeros(time_total/time_step,1);
+
+<span class="comment">% update each electrons positon for each time step</span>
+<span class="keyword">for</span> k=0:time_step:time_total
+    avg_temp = 0;
+    avg_velocity = 0;
+    <span class="keyword">for</span> m=1:num_electrons
+        <span class="comment">% allows electrons to pass through to the other side of the region</span>
+        <span class="comment">%in the x-direction</span>
+        <span class="keyword">if</span> (electron(m,1) &gt;= xlim)
+            electron(m,1) = 0;
+            electron_prev(m,1) = 0;
+        <span class="keyword">elseif</span> (electron(m,1) &lt;= 0)
+            electron(m,1) = xlim;
+            electron_prev(m,1) = xlim;
+        <span class="keyword">end</span>
+        <span class="comment">% electrons are reflected at the same angle if they strike the limits</span>
+        <span class="comment">% of the region in the y-driection</span>
+        <span class="keyword">if</span> ((electron(m,2) &gt;= ylim) || (electron(m,2) &lt;= 0))
+            <span class="comment">%electron(m,3) = pi - electron(m,3);</span>
+            <span class="comment">%electron(m,4) = -electron(m,4);</span>
+            electron(m,6) = -electron(m,6);
+        <span class="keyword">end</span>
+
+        <span class="comment">% see if the particle scatters or not</span>
+        <span class="keyword">if</span>(Pscat &gt; rand())
+            <span class="comment">% scatters at a random angle</span>
+            electron(m,3) = 2*pi*rand();
+            <span class="comment">% new velocity for scattering - gaussian with some</span>
+            <span class="comment">% MAXWELL-BOLTZMAN standard deviation</span>
+            vx_new = randn()*vth;
+            vy_new = randn()*vth;
+            v_new = sqrt(vx_new^2+vy_new^2);
+            electron(m,4) = v_new;
+            electron(m,5) = cos(electron(m,3))*v_new;
+            electron(m,5) = sin(electron(m,3))*v_new;
+            collision_count =+ 1;
+        <span class="keyword">end</span>
+
+        avg_temp = avg_temp + (electron(m,4)^2)*mn/(2*kB);
+        avg_velocity = avg_velocity + electron(m,4);
+
+        <span class="comment">%plot the movement of each electron</span>
+        <span class="keyword">if</span>(k~=0)
+            figure(1)
+            plot([electron_prev(m,1),electron(m,1)],[electron_prev(m,2),electron(m,2)],<span class="string">'color'</span>,electron_colour(m,:))
+            axis([0 xlim 0 ylim]);
+        <span class="keyword">end</span>
+
+    <span class="keyword">end</span>
+
+    title(<span class="string">'Electron movement: random scattering'</span>)
+    xlabel(<span class="string">'x-axis position (m)'</span>)
+    ylabel(<span class="string">'y-axis position (m)'</span>)
+    hold <span class="string">on</span>
+    pause(0.001)
+
+   <span class="comment">% set the previous postion of the electron to the current electron</span>
+   <span class="comment">%postion for the next itteration</span>
+   electron_prev(:,1) = electron(:,1);
+   electron_prev(:,2) = electron(:,2);
+
+   <span class="comment">% set the electron postion to an updated position</span>
+   electron(:,1) = electron(:,1) + electron(:,5).*time_step;
+   electron(:,2) = electron(:,2) + electron(:,6).*time_step;
+
+   electron(:,5) = electron(:,5) + acc*time_step;
+
+   count = count +1;
+   temperature(count,1) = avg_temp/num_electrons;
+   time(count,1) = k + time_step;
+   velocity(count,1) = avg_velocity;
+
+<span class="keyword">end</span>
+
+mean_collision = time_total/collision_count;
+avg_vth = 0;
+<span class="keyword">for</span> n=1:500
+    avg_vth =+ velocity(n,1);
+<span class="keyword">end</span>
+avg_vth = avg_vth/size(velocity,1);
+
+MFP = avg_vth*mean_collision;
+
+figure(2)
+plot(time,temperature)
+axis([0 time_total, 0 1100])
+title(<span class="string">'Temperature of electrons over time'</span>)
+xlabel(<span class="string">'time (s)'</span>)
+ylabel(<span class="string">'Temperature (K)'</span>)
+</pre><img vspace="5" hspace="5" src="Assignment3_Part1_01.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Assignment 3 Part 1 - Andrew Pauls
+% A constant voltage of 0.5 V was applied over the length of the
+% semiconductor in the x direction (L) and the electric field (E) can be calculated
+% by:
+%
+% $$E = V/L$$
+%
+% For a distance of 200 nm the electric field was calculated to be 0.5
+% mV/nm or 500000 V/m.
+%
+% The force on each electron can be calculated by multiplying the charge of
+% an electron (q) by the electric field in which the electron is present.
+%
+% $$F = Eq$$
+%
+% With an electron charge of 1.602 x $10^{-19}$ the force on the each
+% electron was found to be 8.01 x $10^{-14}$ N.
+%
+% The acceleration of the electrons is calcaulted by dividing the force on
+% the electrons by the effective mass of the electrons which is 0.26 x 9.11 x $10^{-31}$ kg.
+%
+% $$a = F/m$$
+%
+% The acceleration is calcualted to be 3.3817 x $10^{17}$.
+%
+% The formula for electron drift current density is given be the following
+% formula:
+%
+% $$J_n = -e n V_d$$
+%
+% Where $J_n$ is the drift current density, $e$ is the charge of an electron,
+% $n$ is the electron concentration (per $cm^2$)and $V_d$ is the average
+% drift velocity.
+
+
+%list of constants
+m0 = 9.11e-31;
+mn = 0.26*m0;
+kB = 1.38e-23;
+T = 300;
+q = 1.602e-19;
+n = 10^15; 
+
+%region limits
+xlim = 200e-9;
+ylim = 100e-9;
+
+%assignment 3 calcualtions
+voltage = 0.1;
+E = voltage/xlim;
+F = E*q;
+acc = F/mn;
+
+%thermal velocity
+vth = sqrt(2*kB*T/mn);
+
+%initialize the number of electrons
+num_electrons = 5;
+
+%defining array for electrons (x postion, y position, angle, velocity)
+electron = zeros(num_electrons, 6);
+
+% the previous position of the electron (previous x position, previous y
+% position)
+electron_prev = zeros(num_electrons, 2);
+
+%spacial step should be smaller than 1/100 of region size
+time_step = xlim/vth/100;
+time_total = time_step*500;
+%num_step = time_total/time_step;
+
+% used to make each electron a different colour
+electron_colour = hsv(num_electrons);
+
+% counter used to check temperature is constant
+count = 0;
+
+% scattering probability
+Pscat = 1-exp(-time_step/0.2e-12);
+
+%set an initial random postion and a fixed velocity for each electron
+for i=1:num_electrons
+    for j=1:6
+        if(j==1)
+            electron(i,j) = xlim*rand();
+        elseif(j==2)
+            electron(i,j) = ylim*rand();
+        elseif(j==3)
+            electron(i,j) = 2*pi*rand();
+        elseif(j==4)
+            electron(i,j) = randn()*vth;
+        % set vx value
+        elseif(j==5)
+            electron(i,j) = electron(i,4)*cos(electron(i,3));
+        % set vy value
+        else
+            electron(i,j) = electron(i,4)*sin(electron(i,3));
+        end
+    end
+end
+
+figure(3)
+hist(electron(:,4))
+title('Velocity Distribution')
+
+% define a temperature and time array for plotting
+temperature= zeros(time_total/time_step,1);
+time = zeros(time_total/time_step,1);
+
+% counter for mean collision time
+collision_count = 0;
+
+running_time = 0;
+
+% velocity array used to calculated mean free path
+velocity = zeros(time_total/time_step,1);
+
+% update each electrons positon for each time step
+for k=0:time_step:time_total
+    avg_temp = 0;
+    avg_velocity = 0;
+    for m=1:num_electrons
+        % allows electrons to pass through to the other side of the region
+        %in the x-direction
+        if (electron(m,1) >= xlim)
+            electron(m,1) = 0;
+            electron_prev(m,1) = 0;
+        elseif (electron(m,1) <= 0)
+            electron(m,1) = xlim;
+            electron_prev(m,1) = xlim;
+        end
+        % electrons are reflected at the same angle if they strike the limits
+        % of the region in the y-driection
+        if ((electron(m,2) >= ylim) || (electron(m,2) <= 0))
+            %electron(m,3) = pi - electron(m,3);
+            %electron(m,4) = -electron(m,4);
+            electron(m,6) = -electron(m,6);
+        end
+        
+        % see if the particle scatters or not
+        if(Pscat > rand())
+            % scatters at a random angle
+            electron(m,3) = 2*pi*rand();
+            % new velocity for scattering - gaussian with some
+            % MAXWELL-BOLTZMAN standard deviation
+            vx_new = randn()*vth;
+            vy_new = randn()*vth;
+            v_new = sqrt(vx_new^2+vy_new^2);
+            electron(m,4) = v_new;
+            electron(m,5) = cos(electron(m,3))*v_new;
+            electron(m,5) = sin(electron(m,3))*v_new;
+            collision_count =+ 1;
+        end
+        
+        avg_temp = avg_temp + (electron(m,4)^2)*mn/(2*kB);
+        avg_velocity = avg_velocity + electron(m,4);
+        
+        %plot the movement of each electron
+        if(k~=0)
+            figure(1)
+            plot([electron_prev(m,1),electron(m,1)],[electron_prev(m,2),electron(m,2)],'color',electron_colour(m,:))
+            axis([0 xlim 0 ylim]);
+        end
+
+    end
+
+    title('Electron movement: random scattering')
+    xlabel('x-axis position (m)')
+    ylabel('y-axis position (m)')
+    hold on
+    pause(0.001)
+
+   % set the previous postion of the electron to the current electron
+   %postion for the next itteration
+   electron_prev(:,1) = electron(:,1);
+   electron_prev(:,2) = electron(:,2);
+   
+   % set the electron postion to an updated position
+   electron(:,1) = electron(:,1) + electron(:,5).*time_step;
+   electron(:,2) = electron(:,2) + electron(:,6).*time_step;
+   
+   electron(:,5) = electron(:,5) + acc*time_step;
+   
+   count = count +1;
+   temperature(count,1) = avg_temp/num_electrons;
+   time(count,1) = k + time_step;
+   velocity(count,1) = avg_velocity;
+     
+end
+
+mean_collision = time_total/collision_count;
+avg_vth = 0;
+for n=1:500
+    avg_vth =+ velocity(n,1);
+end
+avg_vth = avg_vth/size(velocity,1);
+
+MFP = avg_vth*mean_collision;
+   
+figure(2)
+plot(time,temperature)
+axis([0 time_total, 0 1100])
+title('Temperature of electrons over time')
+xlabel('time (s)')
+ylabel('Temperature (K)')
+
+
+##### SOURCE END #####
+--></body></html>
